@@ -99,7 +99,7 @@ class IpLogger():
             Returns:
                 None
         """
-        self.app.run()
+        self.app.run(port=5000)
 
 if __name__ == '__main__':
     ip_logger = IpLogger()
