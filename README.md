@@ -27,22 +27,28 @@ A minimal Python Flask application to demonstrate the Ip logging that logs infor
 
 - Python 3.x
 - Flask
-
-Install dependencies:
-
-```bash
-
-pip3 install -r requirements.txt
-
+  
+## 🛠️Installation 
+- Step 1:
+- Clone the repo
 ```
-or
-
-```bash
-
+git clone https://github.com/pevinkumar10/ip-logger.git
+```
+- Step 2:
+- Go to the directory:
+```
+cd ip-logger
+```
+- Step 3:
+- Install requirements 
+```
 pip3 install flask
+```
+or 
 
 ```
-
+pip3 install -r requirements.txt
+```
 ## 🧪 Usage:
 
 ```bash
