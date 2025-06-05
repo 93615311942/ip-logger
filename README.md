@@ -16,10 +16,14 @@ A minimal Python Flask application to demonstrate the Ip logging that logs infor
 ## 📁 Project Structure
 ```
 .
-├── iplogger.py          # Main application
-├── log.txt              # File where logs are saved (auto-created)
-└── templates/
-    └── index.html       # HTML page served on visiting /
+├── Dockerfile          # Dockerfile to automate the build ( Used with render later !!!) 
+├── LICENSE
+├── README.md
+├── iplogger.py         # Ip logger
+├── log.txt             # File where logs are saved (auto-created)
+├── requirements.txt
+└── templates
+    └── index.html      # HTML page served on visiting / 
 
 ```
 
