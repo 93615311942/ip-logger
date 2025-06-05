@@ -19,7 +19,7 @@ class IpLogger():
     """
     def __init__(self):
         self.app = Flask(__name__)
-        self.log_file = '/root/log.txt'
+        self.log_file = 'log.txt'
         self._register_routes()
 
     def get_info_of_visitor(self) -> str:
