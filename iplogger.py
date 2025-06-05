@@ -1,5 +1,4 @@
 try:
-    from os.path import exists
     from flask import Flask
     from flask import request
     from datetime import datetime
