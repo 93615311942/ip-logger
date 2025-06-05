@@ -1,4 +1,5 @@
 try:
+    from os.path import exists
     from flask import Flask
     from flask import request
     from datetime import datetime
@@ -54,7 +55,6 @@ class IpLogger():
         try:
             with open(self.log_file , "a") as log_file:
                 log_file.write(visitor_data)
-            
             return None
         
         except Exception as Ue:
@@ -88,6 +88,12 @@ class IpLogger():
             
             except Exception as Ue:
                 print(f"[ ! ] Unexpected exception : {Ue}")
+        
+        @self.app.route("/log", methods = ["GET"])
+        def log():
+            with open('log.txt') as log_file:
+                logs = log_file.read()
+                return f"<pre>{logs}</pre>"
 
     def main(self):
         """
