@@ -32,11 +32,11 @@ class IpLogger():
             Returns:
                 None
         """
-        visitor_ip = request.remote_addr
+        forwarded_for = request.headers.get('X-Forwarded-For', request.remote_addr)
+        visitor_ip = forwarded_for.split(',')[0].strip()
         user_agent = request.headers.get('User-Agent')
         referrer = request.headers.get('Referer', 'No Referrer')
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
         visitor_info = f"[{timestamp}] IP: {visitor_ip}, User-Agent: {user_agent}, Referrer: {referrer}\n"
         
         return visitor_info
