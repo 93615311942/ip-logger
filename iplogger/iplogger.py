@@ -19,7 +19,7 @@ class IpLogger():
     """
     def __init__(self):
         self.app = Flask(__name__)
-        self.log_file = 'log.txt'
+        self.log_file = '/root/log.txt'
         self._register_routes()
 
     def get_info_of_visitor(self) -> str:
@@ -99,7 +99,7 @@ class IpLogger():
             Returns:
                 None
         """
-        self.app.run(port=5000)
+        self.app.run(host='0.0.0.0',port=5000)
 
 if __name__ == '__main__':
     ip_logger = IpLogger()
